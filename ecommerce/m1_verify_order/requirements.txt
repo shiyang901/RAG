@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+aiohttp
+numpy
+httpx
+dashscope

@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  m1:
+    build: ./m1
+    ports:
+      - "8001:8000"
+    environment:
+      - QWEN_URL=https://api.qwen.ai/v1/chat/completions
+      - QWEN_KEY=sk-800d5301c0ff4f9cb377c65093468ba3
+
+  m2:
+    build: ./m2
+    ports:
+      - "8002:8000"
+    environment:
+      - QWEN_URL=https://api.qwen.ai/v1/chat/completions
+      - QWEN_KEY=sk-800d5301c0ff4f9cb377c65093468ba3
+
+  m3:
+    build: ./m3
+    ports:
+      - "8003:8000"
+    environment:
+      - QWEN_URL=https://api.qwen.ai/v1/chat/completions
+      - QWEN_KEY=sk-800d5301c0ff4f9cb377c65093468ba3

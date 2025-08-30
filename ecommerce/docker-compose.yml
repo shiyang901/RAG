@@ -1,0 +1,22 @@
+version: "3"
+services:
+  m1:
+    build: ./M1_verify_order
+    ports:
+      - "8001:8000"
+    environment:
+      - QWEN_API_KEY=sk-800d5301c0ff4f9cb377c65093468ba3
+
+  m2:
+    build: ./M2_deduct_inventory
+    ports:
+      - "8002:8000"
+    environment:
+      - QWEN_API_KEY=sk-800d5301c0ff4f9cb377c65093468ba3
+
+  m3:
+    build: ./M3_notify
+    ports:
+      - "8003:8000"
+    environment:
+      - QWEN_API_KEY=sk-800d5301c0ff4f9cb377c65093468ba3
